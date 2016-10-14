@@ -35,8 +35,12 @@ it's a pain in the ass to do that. This was just a tool to help me out in my Com
 # Types
 
 `i<integer>` - Integer
+
 `f<decimal>` - Decimal
+
 `d<register>` - Gets the value of the memory address
+
 `p<register>` - Sets the memory address stored in register to some value
+
 `m<memory_address>` - Gets the value stored in the memory address
 
