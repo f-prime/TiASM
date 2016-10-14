@@ -2,7 +2,6 @@ from __future__ import print_function
 import time
 import sys
 import os
-import pygame
 
 class TASM:
     def __init__(self, instructions):
@@ -26,7 +25,6 @@ class TASM:
             "xor":self.xor,
             "mod":self.mod,
         }
-        pygame.init()
 
     def cycle(self):
         while self.registers['r12'] < len(self.instructions):
@@ -52,13 +50,13 @@ class TASM:
                 continue
             self.__formScreen()
             self.registers['r12'] += 1
-            time.sleep(0.01)
+            #time.sleep(0.01)
         if '-r' in sys.argv:
             __import__("pprint").pprint(self.registers)
         if "-m" in sys.argv:
             __import__("pprint").pprint(self.memory)
     def __formScreen(self):
-        print("\n" * 80)
+        os.system('cls' if os.name == 'nt' else 'clear')
         screen = []
         row = []
         for r in range(1025):
