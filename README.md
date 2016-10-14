@@ -10,14 +10,13 @@ it's a pain in the ass to do that. This was just a tool to help me out in my Com
 
 # System Architecture
 
-- 12 Registers
+- 13 Registers
 - r11 contains the output of the CMP/AND/OR/XOR operator
 - r12 is the program counter
-- r13 is the input register (when a key is pressed the value goes here)
-- 1024 memory locations
+- 2048 memory locations
 - Memory locations 0-1024 are the "Video Memory" or "pixels" on the screen that 
   - 32x32
-- Memory locations 1025-2056 are "RAM" and just for storing information
+- Memory locations 1025-2048 are "RAM" and just for storing information
 
 # Instructions
 

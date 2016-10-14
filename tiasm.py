@@ -10,7 +10,7 @@ class TASM:
         for x in range(0, 14):
             self.registers["r{}".format(x)] = 0
         self.memory = {}
-        for x in range(0,2056):
+        for x in range(0,2048):
             self.memory[str(x)] = 0
         self.tokens = {
             "mov":self.mov,
