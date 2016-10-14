@@ -158,7 +158,7 @@ class TASM:
     def and_(self, instruction):
         left = self.__resolveValue(instruction[1])
         right = self.__resolveValue(instruction[2])
-        if left == right:
+        if left and right:
             self.registers['r11'] = 1
         else:
             self.registers['r11'] = 0
